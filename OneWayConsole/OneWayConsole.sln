@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientConsole", "ClientCons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerConsole", "ServerConsole\ServerConsole.csproj", "{9D586358-9539-46F7-A01F-F7A774FA2FE1}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Shared\Shared.shproj", "{1F0588B9-E6F6-4C54-A84D-B1459BDE52F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -27,5 +29,10 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8377613C-8B94-452D-BBF6-95850979BDA5}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared\Shared.projitems*{1f0588b9-e6f6-4c54-a84d-b1459bde52f6}*SharedItemsImports = 13
+		Shared\Shared.projitems*{8d088980-93c8-43d7-ab53-9ba6cca4d68c}*SharedItemsImports = 5
+		Shared\Shared.projitems*{9d586358-9539-46f7-a01f-f7a774fa2fe1}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
