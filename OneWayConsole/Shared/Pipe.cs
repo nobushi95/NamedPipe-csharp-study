@@ -7,7 +7,7 @@ namespace Shared
     {
         private static readonly string PipeName = "NamedPipe-csharp-study_OneWayConsole_Pipe";
 
-        public static async Task SendAsync(string msg)
+        public static async Task SendAsync(string? msg)
         {
             using var pipe = new NamedPipeClientStream(PipeName);
             try
