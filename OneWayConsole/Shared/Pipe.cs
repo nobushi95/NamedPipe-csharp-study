@@ -1,4 +1,4 @@
-using System.IO.Pipes;
+﻿using System.IO.Pipes;
 using System.Reflection;
 
 namespace Shared
@@ -32,7 +32,9 @@ namespace Shared
             {
                 try
                 {
-                    using var pipe = new NamedPipeServerStream(PipeName);
+                    // 複数のサーバーを立ち上げ、メッセージを送信すると、
+                    // プロセスを起動した順にメッセージが受信される？
+                    using var pipe = new NamedPipeServerStream(PipeName, PipeDirection.InOut, 3);
                     await pipe.WaitForConnectionAsync(cancel);
 
                     using var sr = new StreamReader(pipe);
