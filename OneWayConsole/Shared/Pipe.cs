@@ -43,6 +43,7 @@ namespace Shared
                 catch (Exception ex)
                 {
                     Console.WriteLine($"Catch Exception at {MethodBase.GetCurrentMethod()?.Name}: {ex.Message}");
+                    return;
                 }
             }
         }
