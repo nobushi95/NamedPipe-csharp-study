@@ -10,5 +10,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Pipe.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SingleInstance.cs" />
   </ItemGroup>
 </Project>
