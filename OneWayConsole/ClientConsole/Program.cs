@@ -1,4 +1,4 @@
-﻿using Shared;
+using Shared;
 
 namespace ClientConsole
 {
@@ -11,7 +11,7 @@ namespace ClientConsole
             {
                 Console.Write("> ");
                 var msg = Console.ReadLine();
-                await Pipe.SendAsync(msg);
+                await Pipe.SendAsync(msg, TimeSpan.FromSeconds(1));
                 if (msg == "exit")
                     break;
             }

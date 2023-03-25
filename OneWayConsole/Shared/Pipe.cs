@@ -1,4 +1,4 @@
-﻿using System.IO.Pipes;
+using System.IO.Pipes;
 using System.Reflection;
 
 namespace Shared
@@ -7,12 +7,16 @@ namespace Shared
     {
         private static readonly string PipeName = "NamedPipe-csharp-study_OneWayConsole_Pipe";
 
-        public static async Task SendAsync(string? msg)
+        public static async Task SendAsync(string? msg, TimeSpan timeout = default)
         {
             using var pipe = new NamedPipeClientStream(PipeName);
             try
             {
-                await pipe.ConnectAsync();
+                if (timeout == default)
+                    await pipe.ConnectAsync();
+                else
+                    await pipe.ConnectAsync((int)timeout.TotalMilliseconds);
+
                 using var sw = new StreamWriter(pipe);
                 await sw.WriteLineAsync(msg);
             }
