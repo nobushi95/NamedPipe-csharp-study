@@ -23,7 +23,7 @@ namespace ServerWPF
         {
             Task.Run(async () =>
             {
-                await new Pipe().Server(OnReceive, _cancel.Token);
+                await Pipe.Server(OnReceive, _cancel.Token);
             }).ConfigureAwait(false);
         }
 
