@@ -1,11 +1,11 @@
-﻿using System.IO.Pipes;
+using System.IO.Pipes;
 using System.Reflection;
 
 namespace Shared
 {
     internal class Pipe
     {
-        private static readonly string PipeName = "NamedPipe-csharp-study_OneWayConsole_Pipe";
+        private static readonly string PipeName = "NamedPipe-csharp-study_OneWayWPF_Pipe";
 
         public static async Task SendAsync(string? msg, TimeSpan timeout = default)
         {
