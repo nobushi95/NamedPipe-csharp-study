@@ -1,4 +1,5 @@
 ﻿using Shared;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -34,23 +35,33 @@ namespace ServerWPF
                 _cancel.Cancel();
                 //Close(); // 終了できない(CloseはUIスレッドで呼ばなければいけない？)
 
-                // DispatcherとSynchronizationContextで呼ぶ違いは？？
+                // SynchronizationContextとDispatcherで呼ぶ違いは？？
+                // 1. SynchronizationContextで呼ぶ
                 //_context?.Send((object? _) => { Close(); }, null);
+                // 2. Dispatcherで呼ぶ
                 Dispatcher.Invoke(() => Close());
             }
 
-            // DispatcherとSynchronizationContextで呼ぶ違いは？？
+            var s1 = $"Thread ID: {Environment.CurrentManagedThreadId}"; // ワーカースレッドで実行
+
+            // SynchronizationContextとDispatcherで呼ぶ違いは？？
             // どちらもUIが更新される
 
+            // 1. SynchronizationContextで呼ぶ
             //_context?.Send((object? _) =>
             //{
             //    ReceiveTextBlock.Text += $"{msg}\n";
+            //    var s2 = $"Thread ID: {Environment.CurrentManagedThreadId}"; // UIスレッドで実行
             //}, null);
 
+            // 2. Dispatcherで呼ぶ
             Dispatcher.Invoke(() =>
             {
                 ReceiveTextBlock.Text += $"{msg}\n";
+                var s2 = $"Thread ID: {Environment.CurrentManagedThreadId}"; // UIスレッドで実行
             });
+
+            var s3 = $"Thread ID: {Environment.CurrentManagedThreadId}"; // ワーカースレッドで実行(s1と同じだが偶然 or 仕様？？)
         }
     }
 }
