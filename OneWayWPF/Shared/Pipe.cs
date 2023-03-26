@@ -11,7 +11,7 @@ namespace Shared
     {
         private static readonly string PipeName = "NamedPipe-csharp-study_OneWayWPF_Pipe";
 
-        public static async Task SendAsync(string? msg, TimeSpan timeout = default)
+        public async Task SendAsync(string? msg, TimeSpan timeout = default)
         {
             using var pipe = new NamedPipeClientStream(PipeName);
             try
@@ -30,7 +30,7 @@ namespace Shared
             }
         }
 
-        public static async Task Server(Action<string?> action, CancellationToken cancel)
+        public async Task Server(Action<string?> action, CancellationToken cancel)
         {
             while (!cancel.IsCancellationRequested)
             {

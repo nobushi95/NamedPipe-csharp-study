@@ -21,7 +21,7 @@ namespace ClientWPF
             // TODO: タイムアウトを考慮する
             Task.Run(async () =>
             {
-                await Pipe.SendAsync(msg, TimeSpan.FromSeconds(1));
+                await new Pipe().SendAsync(msg, TimeSpan.FromSeconds(1));
             }).ConfigureAwait(false); // Waitにすると、Taskが終了するまでUIは触れない
             // NOTE: 待っている間くるくるを表示したい
         }
