@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Shared\Shared.shproj", "{3F550803-6A14-45B8-9EEA-B058F5948E6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientWPF", "ClientWPF\ClientWPF.csproj", "{0DAEDEE7-56AB-4CD4-BF6F-403218E981C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerWPF", "ServerWPF\ServerWPF.csproj", "{622A3AF4-D26B-496A-9598-69A9A5D5C6E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DAEDEE7-56AB-4CD4-BF6F-403218E981C2}.Debug|x64.ActiveCfg = Debug|x64
+		{0DAEDEE7-56AB-4CD4-BF6F-403218E981C2}.Debug|x64.Build.0 = Debug|x64
+		{0DAEDEE7-56AB-4CD4-BF6F-403218E981C2}.Release|x64.ActiveCfg = Release|x64
+		{0DAEDEE7-56AB-4CD4-BF6F-403218E981C2}.Release|x64.Build.0 = Release|x64
+		{622A3AF4-D26B-496A-9598-69A9A5D5C6E5}.Debug|x64.ActiveCfg = Debug|x64
+		{622A3AF4-D26B-496A-9598-69A9A5D5C6E5}.Debug|x64.Build.0 = Debug|x64
+		{622A3AF4-D26B-496A-9598-69A9A5D5C6E5}.Release|x64.ActiveCfg = Release|x64
+		{622A3AF4-D26B-496A-9598-69A9A5D5C6E5}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {143D3E89-D26B-41BA-A1F3-A5927A0D7476}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared\Shared.projitems*{3f550803-6a14-45b8-9eea-b058f5948e6c}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal
