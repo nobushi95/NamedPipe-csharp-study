@@ -17,7 +17,7 @@ namespace ClientWPF
 
         private void SendButton_Click(object sender, RoutedEventArgs e)
         {
-            var msg = SendMessageTextBlock.Text;
+            var msg = SendMessageTextBox.Text;
             // TODO: タイムアウトを考慮する
             Task.Run(async () =>
             {
