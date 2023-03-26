@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClientWPF"
         mc:Ignorable="d"
-        Title="MainWindow"
+        Title="ClientWPF"
         Height="200"
         Width="500">
     <Grid Margin="10"
