@@ -8,4 +8,6 @@
     <Platforms>x64</Platforms>
   </PropertyGroup>
 
+  <Import Project="..\Shared\Shared.projitems" Label="Shared" />
+
 </Project>
