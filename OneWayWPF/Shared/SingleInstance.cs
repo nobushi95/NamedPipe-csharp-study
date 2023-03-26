@@ -1,4 +1,8 @@
-﻿namespace Shared
+﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Shared
 {
     internal class SingleInstance : IDisposable
     {
