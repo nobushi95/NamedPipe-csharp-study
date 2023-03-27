@@ -1,4 +1,4 @@
-using Shared;
+﻿using Shared;
 using System;
 using System.Threading.Tasks;
 using System.Windows;
@@ -27,6 +27,7 @@ namespace ClientWPF
                 await Pipe.SendAsync(msg, TimeSpan.FromSeconds(1));
             });
             // NOTE: 待っている間くるくるを表示したい
+            // => Taskを投げる前にくるくる動作を開始して、TaskをWait()してUIスレッドに復帰後に、くるくるを停止すれば実現できそう？
         }
     }
 }
