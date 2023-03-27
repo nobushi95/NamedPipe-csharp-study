@@ -22,10 +22,11 @@ namespace ServerWPF
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            // Taskを投げっぱなし(終了を感知しない)でもよい
             Task.Run(async () =>
             {
                 await Pipe.Server(OnReceive, _cancel.Token);
-            }).ConfigureAwait(false);
+            });
         }
 
         private void OnReceive(string? msg)
